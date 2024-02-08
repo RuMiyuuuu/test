@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE</title>
+    <link rel="stylesheet" href="D:\Downloads\secret\dist\image-style.css">
+    <style>
+        /* Hide the audio element by default */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image-container">
+        <img src="D:\Downloads\secret\dist\letter.jpg" alt="Description of your image" id="hover-image">
+    </div>
+    <!-- Audio element -->
+    <div>
+        <audio id="audio" controls src="Maybe.mp3"></audio>
+    </div>
+
+    <script>
+        // Get references to the image and audio elements
+        const image = document.getElementById('hover-image');
+        const audio = document.getElementById('audio');
+
+        // Function to play the audio when hovering over the image
+        function playAudioOnHover() {
+            audio.play(); // Play the audio
+        }
+
+        // Add event listener to the image for hover
+        image.addEventListener('mouseenter', playAudioOnHover);
+    </script>
+</body>
+
+</html>
